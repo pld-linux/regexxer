@@ -21,7 +21,7 @@ regular expressions.
 
 %description -l pl
 regexxer jest ¶wietnym, graficznym narzêdziem do wyszukiwania i
-zamiany, wykorzystuj±cym wyra¿enia regularne w stypu Perla.
+zamiany, wykorzystuj±cym wyra¿enia regularne w stylu Perla.
 
 %prep
 %setup -q
