@@ -1,17 +1,18 @@
 Summary:	GUI search/replace tool
 Summary(pl):	Graficzne narzêdzie do wyszukiwania i zamiany
 Name:		regexxer
-Version:	0.6
+Version:	0.8
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	34ef50fa035669aca8520de3d085071a
+# Source0-md5:	acaa19b119cc7159c42b7f93e02f9fbd
 URL:		http://regexxer.sourceforge.net/
-BuildRequires:	gconfmm-devel >= 2.0.1
-BuildRequires:	gnome-vfsmm-devel >= 1.3.5
-BuildRequires:	libsigc++12-devel >= 1.2.1
+BuildRequires:	gconfmm-devel >= 2.6.1
+BuildRequires:	gtkmm-devel >= 2.4.0
+BuildRequires:	libglademm-devel >= 2.4.0
 BuildRequires:	pcre-devel >= 4.4-3
+Requires(post): GConf2 >= 2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,7 +27,8 @@ zamiany, wykorzystuj±cym wyra¿enia regularne w stypu Perla.
 %setup -q
 
 %build
-%configure
+%configure \
+	--disable-schemas-install
 %{__make}
 
 %install
@@ -35,12 +37,19 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
+%post
+%gconf_schema_install
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
+%{_datadir}/%{name}
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
+%{_sysconfdir}/gconf/schemas/%{name}.schemas
