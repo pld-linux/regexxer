@@ -1,14 +1,15 @@
 Summary:	GUI search/replace tool
 Summary(pl):	Graficzne narzêdzie do wyszukiwania i zamiany
 Name:		regexxer
-Version:	0.5
+Version:	0.6
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	8bdbf7356b0645651a03f907675e80a6
+# Source0-md5:	34ef50fa035669aca8520de3d085071a
 URL:		http://regexxer.sourceforge.net/
-BuildRequires:	gtkmm-devel >= 2.2.0
+BuildRequires:	gconfmm-devel >= 2.0.1
+BuildRequires:	gnome-vfsmm-devel >= 1.3.5
 BuildRequires:	libsigc++-devel >= 1.2.1
 BuildRequires:	pcre-devel >= 4.4-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
