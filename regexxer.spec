@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://regexxer.sourceforge.net/
 BuildRequires:	gconfmm-devel >= 2.0.1
 BuildRequires:	gnome-vfsmm-devel >= 1.3.5
-BuildRequires:	libsigc++-devel >= 1.2.1
+BuildRequires:	libsigc++12-devel >= 1.2.1
 BuildRequires:	pcre-devel >= 4.4-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
