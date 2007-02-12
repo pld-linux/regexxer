@@ -1,5 +1,5 @@
 Summary:	GUI search/replace tool
-Summary(pl.UTF-8):   Graficzne narzędzie do wyszukiwania i zamiany
+Summary(pl.UTF-8):	Graficzne narzędzie do wyszukiwania i zamiany
 Name:		regexxer
 Version:	0.8
 Release:	1
