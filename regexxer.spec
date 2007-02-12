@@ -1,5 +1,5 @@
 Summary:	GUI search/replace tool
-Summary(pl):	Graficzne narzêdzie do wyszukiwania i zamiany
+Summary(pl.UTF-8):   Graficzne narzÄ™dzie do wyszukiwania i zamiany
 Name:		regexxer
 Version:	0.8
 Release:	1
@@ -19,9 +19,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 regexxer is a nifty GUI search/replace tool featuring Perl-style
 regular expressions.
 
-%description -l pl
-regexxer jest ¶wietnym, graficznym narzêdziem do wyszukiwania i
-zamiany, wykorzystuj±cym wyra¿enia regularne w stylu Perla.
+%description -l pl.UTF-8
+regexxer jest Å›wietnym, graficznym narzÄ™dziem do wyszukiwania i
+zamiany, wykorzystujÄ…cym wyraÅ¼enia regularne w stylu Perla.
 
 %prep
 %setup -q
